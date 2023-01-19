@@ -108,6 +108,5 @@ int main()
 	if ((day > 21 && month == 12) || (day < 21 && month == 1)) { printf("Your zodiac sign is Capricorn\n"); }
 	if ((day > 20 && month == 1) || (day < 20 && month == 2)) { printf("Your zodiac sign is Aquarius\n"); }
 	if ((day > 19 && month == 2) || (day < 21 && month == 3)) { printf("Your zodiac sign is Pisces\n"); }
-	system("pause");
 }
 
