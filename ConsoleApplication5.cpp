@@ -1,23 +1,19 @@
-// ConsoleApplication5.cpp: îïðåäåëÿåò òî÷êó âõîäà äëÿ êîíñîëüíîãî ïðèëîæåíèÿ.
-//
 
 #include "stdafx.h"
 #include "math.h"
-#include "windows.h"
-
 
 int main()
 {
-	//Îáúÿâëÿåì ïåðåìåííûå
-	int day, month, year;		//äåíü, ìåñÿö, ãîä
-	int eastern_year_index;		//èíäåêñ ãîäà äëÿ îïðåäåëåíèÿ ñîîòâåòñâèÿ âîñòî÷íîìó êàëåíäàðþ
+	//ÐžÐ±ÑŠÑÐ²Ð»ÑÐµÐ¼ Ð¿ÐµÑ€ÐµÐ¼ÐµÐ½Ð½Ñ‹Ðµ
+	int day, month, year;		//Ð´ÐµÐ½ÑŒ, Ð¼ÐµÑÑÑ†, Ð³Ð¾Ð´
+	int eastern_year_index;		//Ð¸Ð½Ð´ÐµÐºÑ Ð³Ð¾Ð´Ð° Ð´Ð»Ñ Ð¾Ð¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ñ ÑÐ¾Ð¾Ñ‚Ð²ÐµÑ‚ÑÐ²Ð¸Ñ Ð²Ð¾ÑÑ‚Ð¾Ñ‡Ð½Ð¾Ð¼Ñƒ ÐºÐ°Ð»ÐµÐ½Ð´Ð°Ñ€ÑŽ
 
 	printf("Enter your birthday in format: dd.mm.yyyy\n");
 	scanf_s("%d.%d.%d", &day, &month, &year);
 
 	printf("Date is %02d.%02d.%d\n", day, month, year);
 
-	//Îïðåäåëÿåì âèñîêîñíûé ãîä
+	//ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»ÑÐµÐ¼ Ð²Ð¸ÑÐ¾ÐºÐ¾ÑÐ½Ñ‹Ð¹ Ð³Ð¾Ð´
 	if (year % 4 == 0)
 	{
 		printf("You were born on a leap year\n");
@@ -27,10 +23,10 @@ int main()
 		printf("You were born on a non-leap year\n");
 	}
 
-	//Îïðåäåëÿåì èíäåêñ ãîäà ïî âîñòî÷íîìó êàëåíäàðþ
+	//ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»ÑÐµÐ¼ Ð¸Ð½Ð´ÐµÐºÑ Ð³Ð¾Ð´Ð° Ð¿Ð¾ Ð²Ð¾ÑÑ‚Ð¾Ñ‡Ð½Ð¾Ð¼Ñƒ ÐºÐ°Ð»ÐµÐ½Ð´Ð°Ñ€ÑŽ
 	eastern_year_index = year % 12;
 
-	//Èùåì ñîîòâåòñâèå äëÿ íàçâàíèÿ ãîäà
+	//Ð˜Ñ‰ÐµÐ¼ ÑÐ¾Ð¾Ñ‚Ð²ÐµÑ‚ÑÐ²Ð¸Ðµ Ð´Ð»Ñ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ñ Ð³Ð¾Ð´Ð°
 	switch (eastern_year_index)
 	{
 		case 0:
@@ -99,7 +95,7 @@ int main()
 		}
 	}
 
-	//Îïðåäåëÿåì çíàê çàäèàêà
+	//ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»ÑÐµÐ¼ Ð·Ð½Ð°Ðº Ð·Ð°Ð´Ð¸Ð°ÐºÐ°
 	if ((day > 20 && month == 3) || (day < 21 && month == 4)) { printf("Your zodiac sign is Aries\n"); }
 	if ((day > 20 && month == 4) || (day < 22 && month == 5)) { printf("Your zodiac sign is Taurus\n"); }
 	if ((day > 21 && month == 5) || (day < 22 && month == 6)) { printf("Your zodiac sign is Gemini\n"); }
